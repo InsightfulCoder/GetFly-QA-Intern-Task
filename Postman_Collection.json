@@ -1,0 +1,62 @@
+{
+  "info": {
+    "name": "Construction App API QA Suite",
+    "description": "Automated API validation for Authentication, Project Management, and DPR modules, ensuring schema compliance and RBAC enforcement.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item":,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@domain.com\",\n  \"password\": \"ValidPass123!\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v6.1/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v6.1", "auth", "login"]
+            }
+          },
+          "event":
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Project Management",
+      "item":,
+            "url": {
+              "raw": "{{baseUrl}}/api/v6.1/projects",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v6.1", "projects"]
+            }
+          },
+          "event":
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Daily Progress Reports (DPR)",
+      "item":,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"projectId\": 101,\n  \"date\": \"2026-03-13\",\n  \"workerCount\": 15,\n  \"workDescription\": \"Foundation poured successfully. Weather conditions nominal.\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v6.1/dpr",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v6.1", "dpr"]
+            }
+          },
+          "event":
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
